@@ -16,4 +16,4 @@ The main mathematical representation of the linear regression, with two variable
 
 ![equation](https://latex.codecogs.com/gif.latex?y%20%3D%20%5Cbeta_o%20&plus;%20%5Cbeta_1*x)
 
-And the objective is to learn the parameters &beta; and &beta; to better approximate the value of the dependent variable *y* from the value of the independent variable *x*.
+And the objective is to learn the parameters &beta;<sub>0</sub> and &beta;<sub>1</sub> to better approximate the value of the dependent variable $y$ from the value of the independent variable $x$.
