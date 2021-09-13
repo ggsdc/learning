@@ -44,3 +44,30 @@ As we can see this error function depends both on the values of &beta;<sub>0</su
 
 #### Calculating the derivatives
 
+The calculation of the partial derivatives is a key step to afterwards updating the values of the parameters and improving the model.
+
+Without entering in profound detail of how this derivatives are calculated, their values can be seen in the following formulas:
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20%5Cbeta_0%7D%20%3D%20%28%5Cwidehat%7By%7D_i%20-%20y_i%29)
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20%5Cbeta_1%7D%20%3D%20%28%5Cwidehat%7By%7D_i%20-%20y_i%29*x_i)
+
+This two values will be the ones we need to minimize in order to better fit our model to the training data.
+
+#### Updating the parameters of the model
+
+With the values of the partial derivatives calculated we just need to update the parameters wit the following formulas:
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cbeta_0%20%3D%20%5Cbeta_0%20-%20%5Calpha%20%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20%5Cbeta_0%7D)
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cbeta_1%20%3D%20%5Cbeta_1%20-%20%5Calpha%20%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20%5Cbeta_1%7D)
+
+The new value that appears in this formulas is &alpha; which is called the learning rate, if we set its value small its going to make the model have to take a lot of iterations until reaching the minimized values of the partial derivatives and with the risk of finding a local optimal point in the process, but if we set up its value too big, then the learning may never converge on the optimal values for the parameters.
+
+## How it is set up
+
+In this section we are going to see how the code is organized and how it works.
+
+## Examples
+
+In this section we are going to see the impact of different scenarios of input data and the value of the learning parameter.
